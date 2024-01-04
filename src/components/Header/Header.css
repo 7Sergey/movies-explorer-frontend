@@ -17,10 +17,24 @@
   height: 38px;
 }
 
-/* .header__container {
+.header__container {
   outline: 1px solid #f7f4f4;
-  width: 100%;
   display: flex;
-  justify-content: space-between;
   margin: 0 auto 0;
-} */
+}
+.header__button {
+  text-decoration: none;
+  color: #a9a9a9;
+  border: none;
+
+  margin: 0;
+  padding: 0;
+  margin-top: 8px;
+  background: transparent;
+  transition: opacity 0.4s ease;
+  cursor: pointer;
+}
+.header__button:hover {
+  opacity: 0.6;
+  /* color: red; */
+}

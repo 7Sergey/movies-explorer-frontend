@@ -13,9 +13,13 @@ function Header() {
 
         {isRootHref ? (
           <>
-            <div>
-              <div>Фильмы</div>
-              <div>Сохраненные фильмы</div>
+            <div className="header__container">
+              <Link className="header__button" to={"./movies"}>
+                {"Фильмы"}
+              </Link>
+              <Link className="header__button" to={"./saved-movies"}>
+                {"Сохраненние фильмы"}
+              </Link>
             </div>
 
             <Link className="header__button" to={"./profile"}>
