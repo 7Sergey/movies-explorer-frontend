@@ -1,6 +1,11 @@
 .promo {
   display: flex;
   flex-direction: column;
+  background: #272727;
+  margin: 20px 40px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding-bottom: 30px;
 }
 .promo__header {
   font-family: Inter;
