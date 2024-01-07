@@ -4,7 +4,7 @@ import "./Header.css";
 
 function Header() {
   const href = useMatch({ path: `${window.location.pathname}`, end: false });
-  const isRootHref = href.pathname.endsWith("/");
+  const isRootHref = href.pathname.endsWith("/d");
 
   return (
     <>
@@ -14,16 +14,22 @@ function Header() {
         {isRootHref ? (
           <>
             <div className="header__container">
-              <Link className="header__button" to={"./movies"}>
+              <Link className="header__button header__link" to={"./movies"}>
                 {"Фильмы"}
               </Link>
-              <Link className="header__button" to={"./saved-movies"}>
+              <Link
+                className="header__button header__link"
+                to={"./saved-movies"}
+              >
                 {"Сохраненние фильмы"}
               </Link>
             </div>
 
-            <Link className="header__button" to={"./profile"}>
-              {"Profile"}
+            <Link
+              className="header__button header__btn-account"
+              to={"./profile"}
+            >
+              {"Аккаунт"}
             </Link>
           </>
         ) : (
@@ -31,7 +37,10 @@ function Header() {
             <Link className="header__button" to={"./sign-up"}>
               {"Регистрация"}
             </Link>
-            <Link className="header__button" to={"./sign-in"}>
+            <Link
+              className="header__button header__btn-signin"
+              to={"./sign-in"}
+            >
               {"Войти"}
             </Link>
           </>
