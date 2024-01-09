@@ -33,7 +33,7 @@ function Header() {
             </Link>
           </>
         ) : (
-          <>
+          <div>
             <Link className="header__button" to={"./sign-up"}>
               {"Регистрация"}
             </Link>
@@ -43,7 +43,7 @@ function Header() {
             >
               {"Войти"}
             </Link>
-          </>
+          </div>
         )}
       </header>
       <Outlet />

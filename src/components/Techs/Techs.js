@@ -1,26 +1,23 @@
+import "./Techs.css";
+
 function Techs() {
   return (
-    <div>
-      <h2>Технологии</h2>
-      <div>
-        <h3>7 технологий</h3>
-        <p>
-          На курсе веб-разработки мы освоили технологии, которые применили в
-          дипломном проекте.
-        </p>
-        <div>
-          {/* тут грид на 7 элементов в строчку */}
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JS</li>
-            <li>React</li>
-            <li>Git</li>
-            <li>Express.js</li>
-            <li>mongoDB</li>
-          </ul>
-        </div>
-      </div>
+    <div className="techs">
+      <h2 className="techs__header">Технологии</h2>
+      <h3 className="techs__title">7 технологий</h3>
+      <p className="techs__subtitle">
+        На курсе веб-разработки мы освоили технологии, которые применили в
+        дипломном проекте.
+      </p>
+      <ul className="techs__flex">
+        <li className="techs__item">HTML</li>
+        <li className="techs__item">CSS</li>
+        <li className="techs__item">JS</li>
+        <li className="techs__item">React</li>
+        <li className="techs__item">Git</li>
+        <li className="techs__item">Express.js</li>
+        <li className="techs__item">mongoDB</li>
+      </ul>
     </div>
   );
 }
