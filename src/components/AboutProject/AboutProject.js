@@ -27,8 +27,8 @@ function AboutProject() {
         {/* тут тоже грид 2х2 (1неделя, 4 недели, бекенд, фронтенд) */}
         <div className="about-project__green-line">1 неделя</div>
         <div className="about-project__grey-line">4 недели</div>
-        <div className="about-text">Back-end</div>
-        <div className="about-text">Front-end</div>
+        <div className="about-project__text">Back-end</div>
+        <div className="about-project__text">Front-end</div>
       </div>
     </div>
   );

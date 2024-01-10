@@ -2,7 +2,8 @@
   padding: 110px 70px 100px;
 }
 
-.about-me__grid {
+.about-me__container {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -13,8 +14,12 @@
   font-size: 22px;
   font-weight: 400;
   line-height: 27px;
+  letter-spacing: -0.04em;
+  text-align: left;
+
   border-bottom: solid #dadada 1px;
   padding-bottom: 23px;
+  margin-bottom: 66px;
 }
 
 .about-me__name {
@@ -22,8 +27,8 @@
   font-size: 50px;
   font-weight: 400;
   line-height: 58px;
-
-  margin-top: 66px;
+  letter-spacing: -0.04em;
+  text-align: left;
 }
 
 .about-me__subtitle {
@@ -33,6 +38,8 @@
   font-size: 18px;
   font-weight: 500;
   line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
 }
 
 .about-me__description {
@@ -52,11 +59,18 @@
   margin-top: 99px;
   text-decoration: none;
   color: white;
+
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
 .about-me__avatar {
   background-image: url(../../images/pic__COLOR_pic.svg);
   background-size: contain;
   background-repeat: no-repeat;
-  width: 327px;
+  width: 270px;
 }

@@ -1,6 +1,7 @@
 import { Outlet, useMatch, Link } from "react-router-dom";
 
 import "./Header.css";
+import Footer from "../Footer/Footer";
 
 function Header() {
   const href = useMatch({ path: `${window.location.pathname}`, end: false });
@@ -34,7 +35,10 @@ function Header() {
           </>
         ) : (
           <div>
-            <Link className="header__button" to={"./sign-up"}>
+            <Link
+              className="header__button header__btn-signup"
+              to={"./sign-up"}
+            >
               {"Регистрация"}
             </Link>
             <Link
@@ -47,6 +51,7 @@ function Header() {
         )}
       </header>
       <Outlet />
+      <Footer />
     </>
   );
 }

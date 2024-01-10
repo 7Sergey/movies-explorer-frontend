@@ -6,6 +6,9 @@
   font-size: 22px;
   font-weight: 400;
   line-height: 27px;
+  letter-spacing: -0.04em;
+  text-align: left;
+
   border-bottom: solid #dadada 1px;
   padding-bottom: 23px;
 }
@@ -15,27 +18,28 @@
   padding-bottom: 110px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  /* grid-template-rows: repeat(2, 1fr); */
   grid-column-gap: 40px;
   grid-row-gap: 26px;
 }
 
 .about-project__description-title {
-  padding: 0;
-  margin: 0;
   font-family: Inter;
   font-size: 20px;
   font-weight: 400;
   line-height: 24px;
+  letter-spacing: -0.04em;
+  text-align: left;
+  height: 24px;
 }
 
 .about-project__description-subtitle {
-  padding: 0;
-  margin: 0;
   font-family: Inter;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
 .about-project__deadline {
@@ -68,7 +72,7 @@
   align-items: center;
 }
 
-.about-text {
+.about-project__text {
   color: #8b8b8b;
   font-family: Inter;
   font-size: 14px;
@@ -76,5 +80,5 @@
   line-height: 17px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
 }
