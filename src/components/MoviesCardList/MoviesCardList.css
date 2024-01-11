@@ -1,0 +1,32 @@
+.movies-cardlist {
+  padding-bottom: 28px;
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Изменено на ровно три столбца */
+  column-gap: 30px;
+  row-gap: 59px;
+}
+.movies-cardlist__button-container {
+  padding: 50px 0 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.movies-cardlist__button {
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: 0px;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid #424242;
+  width: 320px;
+  padding-top: 11px;
+  padding-bottom: 9px;
+  background: inherit;
+  color: white;
+  cursor: pointer;
+}

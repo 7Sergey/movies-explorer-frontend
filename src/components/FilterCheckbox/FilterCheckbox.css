@@ -1,0 +1,27 @@
+.filter-checkbox {
+  margin-top: 29px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 12px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #424242;
+}
+
+.filter-checkbox__checkbox {
+  background: inherit;
+  background-image: url(../../images/smalltumb.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  width: 44px;
+  height: 14px;
+}
+.filter-checkbox__title {
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+}
