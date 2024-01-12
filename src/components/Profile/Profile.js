@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Profile.css";
 
-function Profile({ name }) {
+function Profile({ name, email }) {
   const [data, setData] = useState({ userName: "", userEmail: "" });
   function handleInputChange(e, name) {
     setData({ ...data, [name]: e.target.value }); //динамическое создание свойства черезез []
@@ -13,7 +13,7 @@ function Profile({ name }) {
         <div className="profile__container">
           <span className="profile__span">Имя</span>
           <input
-            defaultValue={name}
+            defaultValue={name || ""}
             className="profile__input profile__input_name"
             onChange={(e) => handleInputChange(e, "userName")}
           ></input>
@@ -21,6 +21,7 @@ function Profile({ name }) {
         <div className="profile__container">
           <span className="profile__span">E-mail</span>
           <input
+            defaultValue={email || ""}
             className="profile__input profile__input_email"
             onChange={(e) => handleInputChange(e, "userEmail")}
           ></input>

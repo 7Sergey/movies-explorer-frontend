@@ -12,6 +12,7 @@ import { useState } from "react";
 function App() {
   const [isLogin, setIsLogin] = useState(true);
   const [name, setName] = useState("Виталий");
+  const [email, setEmail] = useState("pochta@yandex.ru");
 
   return (
     <div className="App">
@@ -30,7 +31,10 @@ function App() {
 
           <Route path="sign-in" element={<Login />} />
           <Route path="sign-up" element={<Register />} />
-          <Route path="profile" element={<Profile name={name} />} />
+          <Route
+            path="profile"
+            element={<Profile name={name} email={email} />}
+          />
         </Route>
       </Routes>
     </div>
