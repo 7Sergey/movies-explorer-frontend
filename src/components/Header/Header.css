@@ -28,37 +28,12 @@
   text-decoration: none;
   border: none;
   color: #ffffff;
-  margin: 0;
-  padding: 0;
 
   transition: opacity 0.4s ease;
   cursor: pointer;
 }
 .header__button:hover {
   opacity: 0.6;
-}
-
-.header__link {
-  font-family: Inter;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 18px;
-  letter-spacing: 0em;
-}
-
-.header__btn-account {
-  width: 100px;
-  height: 32px;
-  border-radius: 20px;
-  background-color: #313131;
-  font-family: Inter;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 16px;
-  letter-spacing: 0px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .header__btn-signin {

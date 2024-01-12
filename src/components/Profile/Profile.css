@@ -1,0 +1,74 @@
+.profile {
+  /* max-width: 410px; */
+  margin: 74px auto 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile__form {
+  width: 410px;
+  margin-top: 123px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 16px;
+}
+
+.profile__title {
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.profile__input {
+  display: block;
+  border: none;
+  background: none;
+  text-align: right;
+  outline: none;
+
+  font-family: Inter;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13px;
+  letter-spacing: 0px;
+  text-align: right;
+  color: white;
+  width: 90%;
+  padding-bottom: 16px;
+}
+
+.profile__container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.profile__container:first-child {
+  border-bottom: 1px solid #424242;
+}
+.profile__span {
+  display: block;
+
+  font-family: Inter;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 13px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.profile__btn-edit {
+  margin-top: 220px;
+}
+
+.profile__input_name {
+  padding-bottom: 16px;
+}

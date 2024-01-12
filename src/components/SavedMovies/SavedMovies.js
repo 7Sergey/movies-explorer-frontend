@@ -2,11 +2,11 @@ import Footer from "../Footer/Footer";
 import MoviesCardList from "../MoviesCardList/MoviesCardList";
 // import Preloader from "../Preloader/Preloader";
 import SearchForm from "../SearchForm/SearchForm";
-import "./Movies.css";
+import "./SavedMovies.css";
 
-function Movies() {
+function SavedMovies() {
   return (
-    <div className="movies">
+    <div className="saved-movies">
       <SearchForm />
       {/* <Preloader />  */}
       <MoviesCardList />
@@ -15,4 +15,4 @@ function Movies() {
   );
 }
 
-export default Movies;
+export default SavedMovies;
