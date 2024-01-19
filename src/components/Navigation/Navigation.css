@@ -3,6 +3,9 @@
   margin: 0 auto 0;
   grid-column-gap: 16px;
 }
+.burger {
+  display: none;
+}
 
 .navigation__button {
   text-decoration: none;
@@ -37,4 +40,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (max-width: 769px) {
+  .navigation {
+    display: none;
+  }
+  .navigation__button {
+    display: none;
+  }
+  .navigation__button.open {
+    display: flex;
+  }
+  .navigation.open {
+    display: flex;
+  }
 }

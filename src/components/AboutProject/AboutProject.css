@@ -47,7 +47,6 @@
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: repeat(2, 1fr);
-  /* outline: 1px solid #fbff15; */
 }
 .about-project__green-line {
   font-family: Inter;
@@ -81,4 +80,37 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
+}
+
+@media screen and (max-width: 769px) {
+  .about-project {
+    padding: 90px 50px;
+  }
+
+  .about-project__grid {
+    grid-column-gap: 30px;
+    grid-row-gap: 16px;
+    padding-bottom: 93px;
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .about-project__description-subtitle {
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  .about-project__text {
+    color: #8b8b8b;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
 }

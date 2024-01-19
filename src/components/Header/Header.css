@@ -57,3 +57,9 @@
   letter-spacing: 0px;
   text-align: right;
 }
+
+@media screen and (max-width: 769px) {
+  .header {
+    padding: 18px 30px;
+  }
+}

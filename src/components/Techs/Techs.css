@@ -66,3 +66,74 @@
   letter-spacing: -0.04em;
   text-align: center;
 }
+
+@media screen and (max-width: 769px) {
+  .techs {
+    background: #272727;
+    padding: 90px 50px;
+  }
+
+  .techs__header {
+    border-bottom: solid #dadada 1px;
+    padding-bottom: 23px;
+    font-family: Inter;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: -0.04em;
+    text-align: left;
+  }
+
+  .techs__title {
+    padding: 0;
+    margin: 80px auto 0;
+
+    font-family: Inter;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 58px;
+    letter-spacing: -0.04em;
+    text-align: center;
+  }
+
+  .techs__subtitle {
+    padding: 0;
+    margin: 22px auto 0;
+    max-width: 460px;
+
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: -0.04em;
+    text-align: center;
+  }
+
+  .techs__flex {
+    padding: 0;
+    margin-top: 83px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    grid-column-gap: 10px;
+  }
+
+  .techs__item {
+    list-style: none;
+    width: 84px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #303030;
+    border-radius: 10px;
+
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: -0.04em;
+    text-align: center;
+  }
+}

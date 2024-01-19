@@ -8,9 +8,11 @@ import Profile from "../Profile/Profile";
 import Movies from "../Movies/Movies";
 import SavedMovies from "../SavedMovies/SavedMovies";
 import { useState } from "react";
+import Footer from "../Footer/Footer";
+import PageNotFound from "../PageNotFound/PageNotFound";
 
 function App() {
-  const [isLogin, setIsLogin] = useState(true);
+  const [isLogin, setIsLogin] = useState(false);
   const [name, setName] = useState("Виталий");
   const [email, setEmail] = useState("pochta@yandex.ru");
 
@@ -23,19 +25,22 @@ function App() {
             element={
               <>
                 <Main />
+                <Footer />
               </>
             }
           />
           <Route path="movies" element={<Movies />} />
           <Route path="saved-movies" element={<SavedMovies />} />
 
-          <Route path="sign-in" element={<Login />} />
-          <Route path="sign-up" element={<Register />} />
           <Route
             path="profile"
             element={<Profile name={name} email={email} />}
           />
         </Route>
+        <Route path="sign-in" element={<Login />} />
+        <Route path="sign-up" element={<Register />} />
+
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </div>
   );
