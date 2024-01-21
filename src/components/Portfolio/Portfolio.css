@@ -82,3 +82,38 @@
     text-align: left;
   }
 }
+
+@media screen and (max-width: 580px) {
+  .portfolio {
+    padding: 0 14px 70px;
+  }
+  .portfolio__title {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+
+  .portfolio__subtitle {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: -0.04em;
+    text-align: left;
+  }
+
+  .portfolio__list {
+    margin-top: 40px;
+  }
+
+  .portfolio__img {
+    width: 18px;
+    height: 28px;
+  }
+  .portfolio__link {
+    border-bottom: 1px solid #e6e6e6;
+  }
+}

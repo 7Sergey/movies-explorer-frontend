@@ -148,3 +148,47 @@
     flex-wrap: wrap;
   }
 }
+
+@media screen and (max-width: 580px) {
+  .techs {
+    background-color: #202020;
+    padding: 57px 18px 70px;
+  }
+  .techs__header {
+    border-bottom: solid #000000 1px;
+    padding-bottom: 28px;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.04em;
+    text-align: left;
+  }
+  .techs__title {
+    margin: 60px auto 0;
+
+    font-family: Inter;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: -0.04em;
+    text-align: center;
+  }
+  .techs__subtitle {
+    margin: 24px auto 0;
+    max-width: 292px;
+
+    font-family: Inter;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: -0.04em;
+    text-align: center;
+  }
+  .techs__flex {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 84px 84px;
+    gap: 10px;
+  }
+}
