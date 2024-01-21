@@ -5,7 +5,7 @@
 
 .techs__header {
   border-bottom: solid #dadada 1px;
-  padding-bottom: 23px;
+  padding-bottom: 22px;
   font-family: Inter;
   font-size: 22px;
   font-weight: 400;
@@ -50,9 +50,14 @@
 }
 
 .techs__item {
+  padding-top: 21px;
+  padding-bottom: 22px;
+  box-sizing: border-box;
   list-style: none;
-  width: 90px;
-  height: 60px;
+  min-width: 90px;
+  /* height: 60px;  */
+  padding-top: 21px;
+  padding-bottom: 22px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -75,7 +80,7 @@
 
   .techs__header {
     border-bottom: solid #dadada 1px;
-    padding-bottom: 23px;
+    padding-bottom: 22px;
     font-family: Inter;
     font-size: 22px;
     font-weight: 400;
@@ -121,8 +126,8 @@
 
   .techs__item {
     list-style: none;
-    width: 84px;
-    height: 60px;
+    min-width: 84px;
+    /* min-height: 57px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -135,5 +140,11 @@
     line-height: 15px;
     letter-spacing: -0.04em;
     text-align: center;
+  }
+}
+@media screen and (max-width: 769px) {
+  .techs__flex {
+    grid-gap: 10px;
+    flex-wrap: wrap;
   }
 }

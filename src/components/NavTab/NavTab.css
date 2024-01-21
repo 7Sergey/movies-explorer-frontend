@@ -27,3 +27,22 @@
 .nav-tab__item:hover {
   opacity: 0.6;
 }
+
+@media screen and (max-width: 580px) {
+  .nav-tab {
+    grid-column-gap: 6px;
+  }
+
+  .nav-tab__item {
+    width: 82px;
+    height: 26px;
+    border-radius: 6px;
+
+    font-family: Inter;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+}

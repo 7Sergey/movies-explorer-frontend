@@ -34,3 +34,21 @@
     margin: 350px auto 314px;
   }
 }
+
+@media screen and (max-width: 580px) {
+  .promo {
+    margin: 14px 14px 0;
+    padding-bottom: 17px;
+  }
+  .promo__header {
+    font-family: Inter;
+    font-size: 29px;
+    font-weight: 400;
+    line-height: 37px;
+    letter-spacing: -0.04em;
+    text-align: center;
+
+    margin-top: 220px;
+    margin-bottom: 212px;
+  }
+}
