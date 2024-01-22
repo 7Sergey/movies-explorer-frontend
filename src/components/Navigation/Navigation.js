@@ -5,14 +5,14 @@ import "./Navigation.css";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 
 function Navigation() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   // ${isOpen ? "open" : ""}
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
   return (
     <>
-      <BurgerMenu onClick={toggleMenu} />
+      <BurgerMenu onClick={toggleMenu} isOpen={isOpen} />
       <div className="navigation">
         <Link className={`navigation__button navigation__link`} to={"./movies"}>
           {"Фильмы"}
