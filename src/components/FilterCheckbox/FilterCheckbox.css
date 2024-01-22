@@ -3,7 +3,8 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  column-gap: 12px;
+  align-items: center;
+  column-gap: 7px;
   padding-bottom: 40px;
   border-bottom: 1px solid #424242;
 }
@@ -24,4 +25,25 @@
   line-height: 18px;
   letter-spacing: 0em;
   text-align: left;
+}
+
+@media screen and (max-width: 1279px) {
+  .filter-checkbox {
+    margin-top: 42px;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 580px) {
+  .movies-cardlist {
+    grid-template-columns: 1fr;
+    row-gap: 39px;
+  }
+  .filter-checkbox {
+    margin-top: 47px;
+  }
 }

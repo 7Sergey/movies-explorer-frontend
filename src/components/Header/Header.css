@@ -58,7 +58,7 @@
   text-align: right;
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 1279px) {
   .header {
     padding: 18px 30px;
   }

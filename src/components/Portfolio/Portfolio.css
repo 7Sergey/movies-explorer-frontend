@@ -68,7 +68,7 @@
   text-align: left;
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 1279px) {
   .portfolio {
     padding: 0 50px 90px;
   }

@@ -72,7 +72,7 @@
   text-align: center;
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 1279px) {
   .techs {
     background: #272727;
     padding: 90px 50px;
@@ -142,7 +142,7 @@
     text-align: center;
   }
 }
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 1279px) {
   .techs__flex {
     grid-gap: 10px;
     flex-wrap: wrap;

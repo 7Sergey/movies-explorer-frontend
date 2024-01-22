@@ -18,7 +18,7 @@
   margin: 160px auto 151px;
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 1279px) {
   .promo {
     margin: 20px 20px 0;
   }

@@ -1,4 +1,4 @@
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 1279px) {
   .burger-menu {
     display: flex;
     flex-direction: column;

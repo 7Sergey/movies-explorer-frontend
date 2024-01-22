@@ -12,7 +12,7 @@ import Footer from "../Footer/Footer";
 import PageNotFound from "../PageNotFound/PageNotFound";
 
 function App() {
-  const [isLogin, setIsLogin] = useState(false);
+  const [isLogin, setIsLogin] = useState(true);
   const [name, setName] = useState("Виталий");
   const [email, setEmail] = useState("pochta@yandex.ru");
 

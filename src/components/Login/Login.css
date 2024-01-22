@@ -1,4 +1,4 @@
-.register {
+.login {
   padding: 70px 0 70px;
 
   margin: 0px auto 0;
@@ -8,7 +8,7 @@
   align-items: center;
 }
 
-.register__logo {
+.login__logo {
   margin-left: 0;
   background-image: url(../../images/logo.svg);
   background-size: contain;
@@ -17,12 +17,12 @@
   height: 38px;
 }
 
-.register__header {
+.login__header {
   display: flex;
   flex-direction: column;
 }
 
-.register__form {
+.login__form {
   max-width: 396px;
   display: flex;
   justify-content: center;
@@ -31,7 +31,7 @@
   row-gap: 20px;
 }
 
-.register__title {
+.login__title {
   margin-top: 40px;
   margin-bottom: 40px;
 
@@ -43,7 +43,7 @@
   text-align: left;
 }
 
-.register__input {
+.login__input {
   display: block;
   border: none;
   background: #2f2f2f;
@@ -63,7 +63,7 @@
   box-sizing: border-box;
 }
 
-.register__span {
+.login__span {
   display: block;
   padding-bottom: 10px;
 
@@ -76,7 +76,7 @@
   color: #8b8b8b;
 }
 
-.register__button {
+.login__button {
   font-family: Inter;
   font-size: 14px;
   font-weight: 500;
@@ -93,7 +93,7 @@
   color: white;
 }
 
-.register__link-container {
+.login__link-container {
   margin-top: 16px;
   display: flex;
   flex-direction: row;
@@ -111,7 +111,60 @@
   color: #8b8b8b;
 }
 
-.register__link {
+.login__link {
   text-decoration: none;
   color: #4285f4;
+}
+
+@media screen and (max-width: 1279px) {
+  .login {
+    padding: 232px 0 70px;
+  }
+  .login__title {
+    margin-bottom: 20px;
+  }
+  .login__button {
+    margin-top: 159px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .login__form {
+    max-width: 260px;
+    align-items: center;
+  }
+  .login__input {
+    min-width: 260px;
+  }
+  .login__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .login {
+    padding-top: 56px;
+  }
+  .login__title {
+    margin-top: 50px;
+    margin-bottom: 60px;
+  }
+  .login__button {
+    margin-top: 248px;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+  .login__link-container {
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: center;
+
+    color: #8b8b8b;
+  }
 }
