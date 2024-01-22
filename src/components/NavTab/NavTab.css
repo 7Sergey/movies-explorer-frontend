@@ -6,6 +6,7 @@
 }
 
 .nav-tab__item {
+  text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;

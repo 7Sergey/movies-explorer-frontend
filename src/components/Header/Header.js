@@ -10,7 +10,7 @@ function Header({ isLogin }) {
   return (
     <>
       <header className="header">
-        <div className="header__logo"></div>
+        <Link className="header__logo" to={"../"}></Link>
 
         {isLogin ? (
           <Navigation />

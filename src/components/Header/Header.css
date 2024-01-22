@@ -10,6 +10,7 @@
 }
 
 .header__logo {
+  cursor: pointer;
   margin-left: 0;
   background-image: url(../../images/logo.svg);
   background-size: contain;
