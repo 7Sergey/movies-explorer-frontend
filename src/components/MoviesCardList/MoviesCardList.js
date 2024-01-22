@@ -4,7 +4,7 @@ import "./MoviesCardList.css";
 function MovieCardList() {
   return (
     <>
-      <div className="movies-cardlist">
+      <section className="movies-cardlist">
         <MovieCard
           title={"33 слова о дизайне"}
           image={require("../../images/33слова.png")}
@@ -66,7 +66,7 @@ function MovieCardList() {
           image={require("../../images/по волнам.png")}
           duration={"1ч 17м"}
         />
-      </div>
+      </section>
       <div className="movies-cardlist__button-container">
         <button className="movies-cardlist__button">Ещё</button>
       </div>

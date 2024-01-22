@@ -12,7 +12,7 @@ function Register() {
     setData({ ...data, [name]: e.target.value }); //динамическое создание свойства черезез []
   }
   return (
-    <div className="register">
+    <section className="register">
       <form className="register__form">
         <div className="register__header">
           <div className="register__logo" />
@@ -21,6 +21,7 @@ function Register() {
         <div className="register__container">
           <span className="register__span">Имя</span>
           <input
+            required
             className="register__input register__input_name"
             onChange={(e) => handleInputChange(e, "userName")}
           ></input>
@@ -28,6 +29,7 @@ function Register() {
         <div className="register__container">
           <span className="register__span">E-mail</span>
           <input
+            required
             className="register__input register__input_email"
             onChange={(e) => handleInputChange(e, "userEmail")}
           ></input>
@@ -35,6 +37,7 @@ function Register() {
         <div className="register__container">
           <span className="register__span">Пароль</span>
           <input
+            required
             type="password"
             className="register__input register__input_password"
             onChange={(e) => handleInputChange(e, "userPassword")}
@@ -48,7 +51,7 @@ function Register() {
           Войти
         </Link>
       </div>
-    </div>
+    </section>
   );
 }
 

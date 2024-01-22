@@ -2,7 +2,7 @@ import "./MovieCard.css";
 
 function MovieCard({ title, duration, image, isLiked }) {
   return (
-    <div className="movie-card">
+    <section className="movie-card">
       {isLiked ? (
         <button className="movie-card__button">Сохранить</button>
       ) : (
@@ -13,7 +13,7 @@ function MovieCard({ title, duration, image, isLiked }) {
         <h3 className="movie-card__title">{title}</h3>
         <p className="movie-card__duration">{duration}</p>
       </div>
-    </div>
+    </section>
   );
 }
 

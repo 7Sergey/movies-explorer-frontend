@@ -11,7 +11,7 @@ function Login() {
     setData({ ...data, [name]: e.target.value }); //динамическое создание свойства черезез []
   }
   return (
-    <div className="login">
+    <section className="login">
       <form className="login__form">
         <div className="login__header">
           <div className="login__logo" />
@@ -23,6 +23,7 @@ function Login() {
           <input
             className="login__input login__input_email"
             onChange={(e) => handleInputChange(e, "userEmail")}
+            required
           ></input>
         </div>
         <div className="registelogin__container">
@@ -31,6 +32,7 @@ function Login() {
             type="password"
             className="login__input register__input_password"
             onChange={(e) => handleInputChange(e, "userPassword")}
+            required
           ></input>
         </div>
         <button className="login__button">Войти</button>
@@ -41,7 +43,7 @@ function Login() {
           Регистрация
         </Link>
       </div>
-    </div>
+    </section>
   );
 }
 

@@ -7,12 +7,13 @@ function Profile({ name, email }) {
     setData({ ...data, [name]: e.target.value }); //динамическое создание свойства черезез []
   }
   return (
-    <div className="profile">
+    <section className="profile">
       <h2 className="profile__title">Привет, {name}!</h2>
       <form className="profile__form">
         <div className="profile__container">
           <span className="profile__span">Имя</span>
           <input
+            required
             defaultValue={name || ""}
             className="profile__input profile__input_name"
             onChange={(e) => handleInputChange(e, "userName")}
@@ -21,6 +22,7 @@ function Profile({ name, email }) {
         <div className="profile__container">
           <span className="profile__span">E-mail</span>
           <input
+            required
             defaultValue={email || ""}
             className="profile__input profile__input_email"
             onChange={(e) => handleInputChange(e, "userEmail")}
@@ -29,7 +31,7 @@ function Profile({ name, email }) {
         <button className="profile__btn-edit">Редактировать</button>
       </form>
       <button className="profile__btn-out">Выйти из аккаунта</button>
-    </div>
+    </section>
   );
 }
 

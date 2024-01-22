@@ -9,7 +9,18 @@
   border-bottom: 1px solid #424242;
 }
 
+.filter-checkbox__checkbox.short {
+  cursor: pointer;
+  background: inherit;
+  background-image: url(../../images/short.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  width: 44px;
+  height: 14px;
+}
 .filter-checkbox__checkbox {
+  cursor: pointer;
   background: inherit;
   background-image: url(../../images/smalltumb.png);
   background-repeat: no-repeat;

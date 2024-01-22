@@ -1,11 +1,13 @@
 import "./FilterCheckbox.css";
 
-function FilterCheckbox() {
+function FilterCheckbox({ isShortFilms }) {
   return (
-    <div className="filter-checkbox">
-      <div className="filter-checkbox__checkbox" />
+    <section className="filter-checkbox">
+      <div
+        className={`filter-checkbox__checkbox ${isShortFilms ? "short" : ""}`}
+      />
       <h3 className="filter-checkbox__title">Короткометражки</h3>
-    </div>
+    </section>
   );
 }
 

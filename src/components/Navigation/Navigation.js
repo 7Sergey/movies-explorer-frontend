@@ -13,7 +13,7 @@ function Navigation() {
   return (
     <>
       <BurgerMenu onClick={toggleMenu} isOpen={isOpen} />
-      <div className="navigation">
+      <section className="navigation">
         <Link className={`navigation__button navigation__link`} to={"./movies"}>
           {"Фильмы"}
         </Link>
@@ -23,7 +23,7 @@ function Navigation() {
         >
           {"Сохраненние фильмы"}
         </Link>
-      </div>
+      </section>
 
       <Link
         className={`navigation__button navigation__btn-account`}

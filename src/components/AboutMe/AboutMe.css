@@ -111,6 +111,7 @@
   }
   .about-me__avatar {
     width: 255px;
+    margin-left: 49px;
   }
   .about-me__link {
     display: block;

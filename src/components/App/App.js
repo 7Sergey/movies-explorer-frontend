@@ -17,7 +17,7 @@ function App() {
   const [email, setEmail] = useState("pochta@yandex.ru");
 
   return (
-    <div className="App">
+    <section className="App">
       <Routes>
         <Route path="/" element={<Header isLogin={isLogin} />}>
           <Route
@@ -42,7 +42,7 @@ function App() {
 
         <Route path="*" element={<PageNotFound />} />
       </Routes>
-    </div>
+    </section>
   );
 }
 

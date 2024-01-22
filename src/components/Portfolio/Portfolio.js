@@ -2,10 +2,12 @@ import "./Portfolio.css";
 
 function Portfolio() {
   return (
-    <div className="portfolio">
+    <section className="portfolio">
       <h2 className="portfolio__title">Портфолио</h2>
       <div className="portfolio__list">
         <a
+          target="_blank"
+          rel="noopener noreferrer"
           href="https://7sergey.github.io/HowToLearn/"
           className="portfolio__link"
         >
@@ -14,6 +16,8 @@ function Portfolio() {
         </a>
 
         <a
+          target="_blank"
+          rel="noopener noreferrer"
           href="https://7sergey.github.io/russian-travel/"
           className="portfolio__link"
         >
@@ -22,6 +26,8 @@ function Portfolio() {
         </a>
 
         <a
+          target="_blank"
+          rel="noopener noreferrer"
           href="https://fedorov.nomoredomainsmonster.ru/"
           className="portfolio__link"
         >
@@ -29,7 +35,7 @@ function Portfolio() {
           <div className="portfolio__img" />
         </a>
       </div>
-    </div>
+    </section>
   );
 }
 

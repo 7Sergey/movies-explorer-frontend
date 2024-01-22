@@ -3,7 +3,7 @@ import "./BurgerMenu.css";
 
 function BurgerMenu({ onClick, isOpen }) {
   return (
-    <div className={"burger-menu"}>
+    <section className={"burger-menu"}>
       <div className="burger-menu__icon" onClick={() => onClick()}></div>
 
       <div className={`burger-menu__container ${isOpen ? "open" : ""}`}>
@@ -27,7 +27,7 @@ function BurgerMenu({ onClick, isOpen }) {
           </Link>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 export default BurgerMenu;
