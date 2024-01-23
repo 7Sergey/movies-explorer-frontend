@@ -39,7 +39,7 @@ function Login() {
       </form>
       <div className="login__link-container">
         <p className="login__link-paragraph">Ещё не зарегистрированы?</p>
-        <Link className="login__link" to="../sign-up">
+        <Link className="login__link" to="../signup">
           Регистрация
         </Link>
       </div>

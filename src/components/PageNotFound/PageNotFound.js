@@ -7,7 +7,7 @@ const PageNotFound = () => {
     <section className="page-not-found">
       <h2 className="page-not-found__title">404</h2>
       <p className="page-not-found__subtitle">Страница не найдена</p>
-      <Link className="page-not-found__link" to="../sign-in">
+      <Link className="page-not-found__link" to="../signin">
         Назад
       </Link>
     </section>

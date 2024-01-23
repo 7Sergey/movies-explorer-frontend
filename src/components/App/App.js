@@ -37,8 +37,8 @@ function App() {
             element={<Profile name={name} email={email} />}
           />
         </Route>
-        <Route path="sign-in" element={<Login />} />
-        <Route path="sign-up" element={<Register />} />
+        <Route path="signin" element={<Login />} />
+        <Route path="signup" element={<Register />} />
 
         <Route path="*" element={<PageNotFound />} />
       </Routes>

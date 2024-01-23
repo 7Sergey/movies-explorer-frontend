@@ -16,16 +16,10 @@ function Header({ isLogin }) {
           <Navigation />
         ) : (
           <div>
-            <Link
-              className="header__button header__btn-signup"
-              to={"./sign-up"}
-            >
+            <Link className="header__button header__btn-signup" to={"./signup"}>
               {"Регистрация"}
             </Link>
-            <Link
-              className="header__button header__btn-signin"
-              to={"./sign-in"}
-            >
+            <Link className="header__button header__btn-signin" to={"./signin"}>
               {"Войти"}
             </Link>
           </div>
