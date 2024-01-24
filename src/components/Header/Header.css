@@ -1,0 +1,92 @@
+.header {
+  margin: 0px auto 0;
+  padding: 18px 70px;
+  box-sizing: border-box;
+  max-width: 1280px;
+  min-width: 320px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  cursor: pointer;
+  margin-left: 0;
+  background-image: url(../../images/logo.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 38px;
+  height: 38px;
+}
+
+.header__container {
+  /* outline: 1px solid #f7f4f4; */
+  display: flex;
+  margin: 0 auto 0;
+  grid-column-gap: 16px;
+}
+.header__button {
+  text-decoration: none;
+  border: none;
+  color: #ffffff;
+
+  transition: opacity 0.4s ease;
+  cursor: pointer;
+}
+.header__button:hover {
+  opacity: 0.6;
+}
+
+.header__btn-signin {
+  margin-left: 30px;
+  background-color: #3ddc84;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0px;
+  border-radius: 3px;
+  padding: 8px 20px;
+  color: black;
+}
+
+.header__btn-signup {
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0px;
+  text-align: right;
+}
+
+@media screen and (max-width: 1279px) {
+  .header {
+    padding: 18px 30px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .header {
+    padding: 18px 14px;
+  }
+
+  .header__btn-signin {
+    margin-left: 14px;
+    font-family: Inter;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: left;
+
+    padding: 5px 12px;
+  }
+  .header__btn-signup {
+    font-family: Inter;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: right;
+  }
+}

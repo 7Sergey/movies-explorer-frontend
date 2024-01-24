@@ -1,0 +1,108 @@
+.movie-card {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.movie-card__button {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  padding: 6px 7px;
+  background: #313131;
+  border: none;
+  border-radius: 30px;
+
+  cursor: pointer;
+
+  color: white;
+  font-family: Inter;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 9px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+.movie-card__like {
+  width: 21px;
+  height: 21px;
+  background: #ee3465;
+  background-image: url(../../images/like.svg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.movie-card__image {
+  border-radius: 8px;
+  width: 100%;
+}
+
+.movie-card__title {
+  font-family: Inter;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 15.73px;
+
+  letter-spacing: 0px;
+  text-align: left;
+  max-height: 16px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.movie-card__duration {
+  color: #8b8b8b;
+  background: #2f2f2f;
+  border-radius: 3px;
+  padding: 3px 4px;
+  box-sizing: border-box;
+  min-width: 52px;
+  font-family: Inter;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 10px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+.movie-card__info {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 14px 0;
+}
+
+@media screen and (max-width: 1279px) {
+  .movie-card {
+    max-width: 339px;
+  }
+  .movie-card__info {
+    padding: 0;
+    margin-top: 23px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .movie-card {
+    max-width: 300px;
+  }
+  .movie-card__info {
+    margin-top: 14px;
+  }
+  .movie-card__title {
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+}

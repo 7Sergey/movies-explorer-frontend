@@ -1,0 +1,168 @@
+.register {
+  padding: 70px 0 70px;
+
+  margin: 0px auto 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.register__logo {
+  margin-left: 0;
+  background-image: url(../../images/logo.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 38px;
+  height: 38px;
+}
+
+.register__header {
+  display: flex;
+  flex-direction: column;
+}
+
+.register__form {
+  max-width: 396px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 20px;
+}
+
+.register__title {
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.register__input {
+  display: block;
+  border: none;
+  background: #2f2f2f;
+  outline: none;
+  border-radius: 8px;
+
+  font-family: Inter;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+
+  color: white;
+  min-width: 396px;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.register__span {
+  display: block;
+  padding-bottom: 10px;
+
+  font-family: Inter;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #8b8b8b;
+}
+
+.register__button {
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: center;
+
+  border-radius: 3px;
+  margin-top: 82px;
+  width: 100%;
+  background: #4285f4;
+  padding: 13px 0 15px;
+  border: none;
+  color: white;
+}
+
+.register__link-container {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: row;
+  column-gap: 6px;
+
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.register__link-paragraph {
+  color: #8b8b8b;
+}
+
+.register__link {
+  text-decoration: none;
+  color: #4285f4;
+}
+
+@media screen and (max-width: 1279px) {
+  .register {
+    padding: 232px 0 70px;
+  }
+  .register__title {
+    margin-bottom: 20px;
+  }
+  .register__button {
+    margin-top: 71px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .register__form {
+    max-width: 260px;
+    align-items: center;
+  }
+  .register__input {
+    min-width: 260px;
+  }
+  .register__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .register {
+    padding-top: 56px;
+  }
+  .register__title {
+    margin-top: 50px;
+    margin-bottom: 60px;
+  }
+  .register__button {
+    margin-top: 160px;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+  .register__link-container {
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+}

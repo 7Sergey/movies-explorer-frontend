@@ -1,0 +1,58 @@
+.navigation {
+  display: flex;
+  margin: 0 auto 0;
+  grid-column-gap: 16px;
+}
+.burger {
+  display: none;
+}
+
+.navigation__button {
+  text-decoration: none;
+  border: none;
+  color: #ffffff;
+
+  transition: opacity 0.4s ease;
+  cursor: pointer;
+}
+.navigation__button:hover {
+  opacity: 0.6;
+}
+
+.navigation__link {
+  font-family: Inter;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+}
+
+.navigation__btn-account {
+  width: 100px;
+  height: 32px;
+  border-radius: 20px;
+  background-color: #313131;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 800px) {
+  .navigation {
+    display: none;
+  }
+  .navigation__button {
+    display: none;
+  }
+  .navigation__button.open {
+    display: flex;
+  }
+  .navigation.open {
+    display: flex;
+  }
+}
