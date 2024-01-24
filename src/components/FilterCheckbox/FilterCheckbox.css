@@ -12,7 +12,7 @@
 .filter-checkbox__checkbox.short {
   cursor: pointer;
   background: inherit;
-  background-image: url(../../images/short.png);
+  background-image: url(../../images/shortfilmon.svg);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
@@ -22,7 +22,7 @@
 .filter-checkbox__checkbox {
   cursor: pointer;
   background: inherit;
-  background-image: url(../../images/smalltumb.png);
+  background-image: url(../../images/shortfilmof.svg);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
