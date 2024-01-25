@@ -3,7 +3,7 @@ import { Outlet, useMatch, Link } from "react-router-dom";
 import "./Header.css";
 import Navigation from "../Navigation/Navigation";
 
-function Header({ isLogin }) {
+function Header({ isLoggedIn }) {
   // const href = useMatch({ path: `${window.location.pathname}`, end: false });
   // const isRootHref = href.pathname.endsWith("/");
 
@@ -12,7 +12,7 @@ function Header({ isLogin }) {
       <header className="header">
         <Link className="header__logo" to={"../"}></Link>
 
-        {isLogin ? (
+        {isLoggedIn ? (
           <Navigation />
         ) : (
           <div>

@@ -1,11 +1,23 @@
 import MovieCard from "../MovieCard/MovieCard";
 import "./MoviesCardList.css";
 
-function MovieCardList() {
+function MovieCardList({ movies }) {
+  console.log(movies);
   return (
     <>
       <section className="movies-cardlist">
-        <MovieCard
+        {movies.map((movie) => {
+          console.log(movie.image);
+          return (
+            <MovieCard
+              title={movie.nameRU}
+              key={movie.id}
+              image={movie.image}
+              duration={movie.duration}
+            />
+          );
+        })}
+        {/* <MovieCard
           title={"33 слова о дизайне"}
           image={require("../../images/33слова.png")}
           duration={"1ч 17м"}
@@ -65,7 +77,7 @@ function MovieCardList() {
           title={"По волнам: Искусство звука в кино"}
           image={require("../../images/по волнам.png")}
           duration={"1ч 17м"}
-        />
+        /> */}
       </section>
       <div className="movies-cardlist__button-container">
         <button className="movies-cardlist__button">Ещё</button>
