@@ -1,15 +1,14 @@
 import MovieCard from "../MovieCard/MovieCard";
 import "./MoviesCardList.css";
 
-function MovieCardList({ movies }) {
-  console.log(movies);
+function MovieCardList({ searchResults }) {
   return (
     <>
       <section className="movies-cardlist">
-        {movies.map((movie) => {
-          console.log(movie.image);
+        {searchResults.map((movie) => {
           return (
             <MovieCard
+              trailerLink={movie.trailerLink}
               title={movie.nameRU}
               key={movie.id}
               image={movie.image}

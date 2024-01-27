@@ -1,9 +1,11 @@
 import "./MovieCard.css";
 
-function MovieCard({ title, duration, image, isLiked }) {
-  console.log(image);
+function MovieCard({ trailerLink, title, duration, image, isLiked }) {
+  const handleCardClick = () => {
+    window.open(trailerLink, "_blank");
+  };
   return (
-    <section className="movie-card">
+    <section className="movie-card" onClick={handleCardClick}>
       {isLiked ? (
         <button className="movie-card__button">Сохранить</button>
       ) : (

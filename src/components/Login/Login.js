@@ -1,18 +1,33 @@
 import { useState } from "react";
 import "./Login.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-function Login() {
+function Login({ onLogin }) {
   const [data, setData] = useState({
-    userEmail: "",
-    userPassword: "",
+    email: "",
+    password: "",
   });
+  const navigate = useNavigate();
+
   function handleInputChange(e, name) {
     setData({ ...data, [name]: e.target.value }); //динамическое создание свойства черезез []
   }
+  function handleSubmit(e) {
+    console.log(data);
+    e.preventDefault();
+    onLogin(data)
+      .then(() => {
+        navigate("/movies");
+      })
+      .then(() => {
+        setData("");
+      })
+      .catch(console.log);
+  }
+
   return (
     <section className="login">
-      <form className="login__form">
+      <form className="login__form" onSubmit={handleSubmit}>
         <div className="login__header">
           <div className="login__logo" />
           <h2 className="login__title">Рады видеть!</h2>
@@ -22,7 +37,7 @@ function Login() {
           <span className="login__span">E-mail</span>
           <input
             className="login__input login__input_email"
-            onChange={(e) => handleInputChange(e, "userEmail")}
+            onChange={(e) => handleInputChange(e, "email")}
             required
           ></input>
         </div>
@@ -31,7 +46,7 @@ function Login() {
           <input
             type="password"
             className="login__input register__input_password"
-            onChange={(e) => handleInputChange(e, "userPassword")}
+            onChange={(e) => handleInputChange(e, "password")}
             required
           ></input>
         </div>

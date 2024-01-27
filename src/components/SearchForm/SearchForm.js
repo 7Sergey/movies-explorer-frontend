@@ -2,9 +2,8 @@ import { useState } from "react";
 import FilterCheckbox from "../FilterCheckbox/FilterCheckbox";
 import "./SearchForm.css";
 
-function SearchForm() {
+function SearchForm({ onSearch, onCheckboxClick, isShortFilms }) {
   const [value, setValue] = useState("");
-  const [isShortFilms, setIsShortFilms] = useState(true);
 
   function handleInputChange(e) {
     setValue(e.target.value); //динамическое создание свойства черезез []
@@ -13,7 +12,7 @@ function SearchForm() {
   function handleSubmit(e) {
     // Запрещаем браузеру переходить по адресу формы
     e.preventDefault();
-    console.log("Отправлено");
+    onSearch(value);
   }
   return (
     <>
@@ -28,7 +27,10 @@ function SearchForm() {
         ></input>
         <button type="submit" className="search-form__button"></button>
       </form>
-      <FilterCheckbox isShortFilms={isShortFilms} />
+      <FilterCheckbox
+        isShortFilms={isShortFilms}
+        onCheckboxClick={onCheckboxClick}
+      />
     </>
   );
 }

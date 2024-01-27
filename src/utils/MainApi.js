@@ -11,7 +11,7 @@ export default class MainApi {
   getCurrentUser() {
     return fetch(`${this._baseUrl}/users/me`, {
       headers: this._headers,
-      method: "POST",
+      method: "GET",
     }).then((res) => this._checkResponse(res));
   }
   patchUser({ name, email }) {
@@ -49,7 +49,7 @@ export default class MainApi {
   createUser({ name, email, password }) {
     return fetch(`${this._baseUrl}/signup`, {
       headers: this._headers,
-      method: "PATCH",
+      method: "POST",
       body: JSON.stringify({
         name: name,
         email: email,
@@ -61,7 +61,7 @@ export default class MainApi {
   login({ email, password }) {
     return fetch(`${this._baseUrl}/signin`, {
       headers: this._headers,
-      method: "PATCH",
+      method: "POST",
       body: JSON.stringify({
         email: email,
         password: password,
@@ -77,16 +77,10 @@ export default class MainApi {
   }
 }
 
-// export const api = new Api({
-//   baseUrl: "https://mesto.nomoreparties.co/v1/cohort-65/",
-//   headers: {
-//     authorization: "2924de2c-ae46-4a4c-8bf8-6b1d4464169e",
-//     "Content-Type": "application/json",
-//   },
-// });
-
 export const api = new MainApi({
-  baseUrl: "api.fedorov.movies.nomoredomainsmonster.ru",
+  // baseUrl: "api.fedorov.movies.nomoredomainsmonster.ru",
+  baseUrl: "http://localhost:3000",
+
   headers: {
     "Content-Type": "application/json",
   },

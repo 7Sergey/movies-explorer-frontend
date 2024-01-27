@@ -4,12 +4,12 @@ import MoviesCardList from "../MoviesCardList/MoviesCardList";
 import SearchForm from "../SearchForm/SearchForm";
 import "./SavedMovies.css";
 
-function SavedMovies() {
+function SavedMovies({ movies }) {
   return (
     <section className="saved-movies">
       <SearchForm />
       {/* <Preloader />  */}
-      <MoviesCardList />
+      <MoviesCardList movies={movies} />
       <Footer />
     </section>
   );
