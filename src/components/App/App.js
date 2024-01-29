@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 // стили
 import "./App.css";
 // компоненты
@@ -16,6 +16,7 @@ import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 import getMovies from "../../utils/MoviesApi";
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
 import { api } from "../../utils/MainApi";
+import { getContent } from "../../utils/auth";
 
 function App() {
   const [name, setName] = useState("Виталий");
@@ -27,6 +28,13 @@ function App() {
   const [searchResults, setSearchResults] = useState([]); // отфильтрованные фильмы
   const [isLoading, setIsLoading] = useState(false); //загружается страница/поиск фильмы пока не искали
 
+  const [userData, setUserData] = React.useState({
+    _id: "",
+    email: "",
+  });
+
+  const navigate = useNavigate();
+
   React.useEffect(() => {
     getMovies()
       .then((movies) => {
@@ -36,18 +44,42 @@ function App() {
       .catch(console.log);
   }, []);
 
+  const auth = (token) => {
+    getContent(token)
+      .then((res) => {
+        console.log(token);
+        setUserData(res.data);
+        setIsLoggedIn(true);
+        navigate("/");
+      })
+      .catch(() => {
+        setIsLoggedIn(false);
+        navigate("/signin");
+      });
+  };
+
+  React.useEffect(() => {
+    const token = localStorage.getItem("token");
+    auth(token);
+  }, []);
+
   function handleLogin(data) {
-    console.log("handlelogigdata", data);
     return api
       .login(data.email, data.password)
       .then((res) => {
+        console.log("res:", res);
         if (res.token) {
-          // setUserData(data)
-          // setisLoggedIn(true)
           localStorage.setItem("token", res.token);
+          console.log("Успешный вход в систему");
+          setUserData(data);
+          setIsLoggedIn(true);
         }
+
+        console.log("залогинен");
       })
-      .catch(() => {
+      .catch((error) => {
+        console.error("Ошибка входа в систему:", error);
+
         // setisSuccess(false)
         // setInfoTooltipPopup(true)
       });
@@ -81,7 +113,13 @@ function App() {
 
           <Route
             path="profile"
-            element={<Profile name={name} email={email} />}
+            element={
+              <Profile
+                name={name}
+                email={email}
+                setIsLoggedIn={setIsLoggedIn}
+              />
+            }
           />
         </Route>
         <Route path="signin" element={<Login onLogin={handleLogin} />} />

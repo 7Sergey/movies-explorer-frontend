@@ -27,7 +27,7 @@ function Movies({ movies, isLoading }) {
     });
     setSearchResults(filteredMovies);
   }
-  console.log(searchResults);
+  // console.log(searchResults);
   return (
     <section className="movies">
       <SearchForm

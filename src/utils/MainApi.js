@@ -14,7 +14,7 @@ export default class MainApi {
       method: "GET",
     }).then((res) => this._checkResponse(res));
   }
-  patchUser({ name, email }) {
+  patchUser(name, email) {
     return fetch(`${this._baseUrl}/users/me`, {
       headers: this._headers,
       method: "PATCH",
@@ -46,7 +46,7 @@ export default class MainApi {
     }).then((res) => this._checkResponse(res));
   }
 
-  createUser({ name, email, password }) {
+  createUser(name, email, password) {
     return fetch(`${this._baseUrl}/signup`, {
       headers: this._headers,
       method: "POST",
@@ -58,14 +58,19 @@ export default class MainApi {
     }).then((res) => this._checkResponse(res));
   }
 
-  login({ email, password }) {
+  login(email, password) {
     return fetch(`${this._baseUrl}/signin`, {
-      headers: this._headers,
+      headers: {
+        "Content-Type": "application/json",
+      },
       method: "POST",
+
       body: JSON.stringify({
         email: email,
         password: password,
       }),
+
+      credentials: "include", // Важно установить credentials в 'include'
     }).then((res) => this._checkResponse(res));
   }
 

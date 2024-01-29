@@ -13,14 +13,20 @@ function Login({ onLogin }) {
     setData({ ...data, [name]: e.target.value }); //динамическое создание свойства черезез []
   }
   function handleSubmit(e) {
-    console.log(data);
+    if (!data.email || !data.password) {
+      console.error("Email и пароль обязательны");
+      return;
+    }
     e.preventDefault();
     onLogin(data)
       .then(() => {
         navigate("/movies");
       })
       .then(() => {
-        setData("");
+        setData({
+          email: "",
+          password: "",
+        });
       })
       .catch(console.log);
   }
@@ -36,6 +42,7 @@ function Login({ onLogin }) {
         <div className="login__container">
           <span className="login__span">E-mail</span>
           <input
+            type="email"
             className="login__input login__input_email"
             onChange={(e) => handleInputChange(e, "email")}
             required

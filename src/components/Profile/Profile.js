@@ -1,10 +1,18 @@
 import { useState } from "react";
 import "./Profile.css";
+import { useNavigate } from "react-router-dom";
 
-function Profile({ name, email }) {
+function Profile({ name, email, setIsLoggedIn }) {
+  const navigate = useNavigate();
+
   const [data, setData] = useState({ userName: "", userEmail: "" });
   function handleInputChange(e, name) {
     setData({ ...data, [name]: e.target.value }); //динамическое создание свойства черезез []
+  }
+  function onClick() {
+    localStorage.removeItem("token");
+    navigate("/sign-in", { replace: true });
+    setIsLoggedIn(false);
   }
   return (
     <section className="profile">
@@ -30,7 +38,9 @@ function Profile({ name, email }) {
         </div>
         <button className="profile__btn-edit">Редактировать</button>
       </form>
-      <button className="profile__btn-out">Выйти из аккаунта</button>
+      <button className="profile__btn-out" onClick={onClick}>
+        Выйти из аккаунта
+      </button>
     </section>
   );
 }
