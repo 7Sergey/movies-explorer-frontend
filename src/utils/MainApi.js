@@ -83,8 +83,8 @@ export default class MainApi {
 }
 
 export const api = new MainApi({
-  // baseUrl: "api.fedorov.movies.nomoredomainsmonster.ru",
-  baseUrl: "http://localhost:3000",
+  baseUrl: "api.fedorov.movies.nomoredomainsmonster.ru",
+  // baseUrl: "http://localhost:3000",
 
   headers: {
     "Content-Type": "application/json",
