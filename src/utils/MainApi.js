@@ -1,92 +1,61 @@
-export default class MainApi {
-  constructor({ baseUrl, headers }) {
-    this._baseUrl = baseUrl;
-    this._headers = headers;
+const BASE_URL = "http://api.fedorov.movies.nomoredomainsmonster.ru";
+
+const createRequest = async (url, method, body = null, token = null) => {
+  const options = {
+    method,
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${localStorage.getItem("jwt")}`,
+    },
+  };
+
+  if (token) options.headers["Authorization"] = `Bearer ${token}`;
+  if (body) options.body = JSON.stringify(body);
+
+  const response = await fetch(url, options);
+  const data = await response.json();
+
+  if (!response.ok) {
+    throw new Error(data.message);
   }
 
-  _checkResponse(res) {
-    return res.ok ? res.json() : Promise.reject(`Error:${res.status}`);
-  }
+  return data;
+};
 
-  getCurrentUser() {
-    return fetch(`${this._baseUrl}/users/me`, {
-      headers: this._headers,
-      method: "GET",
-    }).then((res) => this._checkResponse(res));
-  }
-  patchUser(name, email) {
-    return fetch(`${this._baseUrl}/users/me`, {
-      headers: this._headers,
-      method: "PATCH",
-      body: JSON.stringify({
-        name: name,
-        email: email,
-      }),
-    }).then((res) => this._checkResponse(res));
-  }
+const getUser = (token) =>
+  createRequest(`${BASE_URL}/users/me`, "GET", null, token);
 
-  getSavedMovies() {
-    return fetch(`${this._baseUrl}/movies`, {
-      headers: this._headers,
-      method: "GET",
-    }).then((res) => this._checkResponse(res));
-  }
+const updateUser = (user) =>
+  createRequest(`${BASE_URL}/users/me`, "PATCH", {
+    name: user.name,
+    email: user.email,
+  });
 
-  createMovie() {
-    return fetch(`${this._baseUrl}/movies`, {
-      headers: this._headers,
-      method: "POST",
-    }).then((res) => this._checkResponse(res));
-  }
+const getMovies = () => createRequest(`${BASE_URL}/movies`, "GET");
 
-  deleteMovie(idMovie) {
-    return fetch(`${this._baseUrl}/movies/${idMovie}`, {
-      headers: this._headers,
-      method: "DELETE",
-    }).then((res) => this._checkResponse(res));
-  }
+const addMovie = (movie) =>
+  createRequest(`${BASE_URL}/movies`, "POST", {
+    country: movie.country,
+    director: movie.director,
+    duration: movie.duration,
+    year: movie.year,
+    description: movie.description,
+    image: `https://api.nomoreparties.co/${movie.image.url}`,
+    trailerLink: movie.trailerLink,
+    nameRU: movie.nameRU,
+    nameEN: movie.nameEN,
+    thumbnail: `https://api.nomoreparties.co/${movie.image.formats.thumbnail.url}`,
+    movieId: movie.id,
+  });
 
-  createUser(name, email, password) {
-    return fetch(`${this._baseUrl}/signup`, {
-      headers: this._headers,
-      method: "POST",
-      body: JSON.stringify({
-        name: name,
-        email: email,
-        password: password,
-      }),
-    }).then((res) => this._checkResponse(res));
-  }
+const deleteMovie = (id) => createRequest(`${BASE_URL}/movies/${id}`, "DELETE");
 
-  login(email, password) {
-    return fetch(`${this._baseUrl}/signin`, {
-      headers: {
-        "Content-Type": "application/json",
-      },
-      method: "POST",
+const MainApi = {
+  getUser,
+  updateUser,
+  getMovies,
+  addMovie,
+  deleteMovie,
+};
 
-      body: JSON.stringify({
-        email: email,
-        password: password,
-      }),
-
-      credentials: "include", // Важно установить credentials в 'include'
-    }).then((res) => this._checkResponse(res));
-  }
-
-  signout() {
-    return fetch(`${this._baseUrl}/signout`, {
-      headers: this._headers,
-      method: "POST",
-    }).then((res) => this._checkResponse(res));
-  }
-}
-
-export const api = new MainApi({
-  baseUrl: "api.fedorov.movies.nomoredomainsmonster.ru",
-  // baseUrl: "http://localhost:3000",
-
-  headers: {
-    "Content-Type": "application/json",
-  },
-});
+export default MainApi;

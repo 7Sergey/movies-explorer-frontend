@@ -64,6 +64,7 @@ function App() {
   }, []);
 
   function handleLogin(data) {
+    console.log("login:", data.email, data.password);
     return api
       .login(data.email, data.password)
       .then((res) => {
